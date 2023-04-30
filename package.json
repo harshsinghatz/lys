@@ -1,0 +1,28 @@
+{
+  "name": "lys",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --experimental-specifier-resolution=node --loader ts-node/esm ./src/index.ts",
+    "build": "rimraf dist && tsc && rollup -c rollup.config.js",
+    "start:db": "json-server -w db.json",
+    "ts:run": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@open-wc/building-rollup": "^2.2.1",
+    "@types/node": "^18.11.18",
+    "deepmerge": "^4.2.2",
+    "rimraf": "^3.0.2",
+    "rollup": "^3.8.1"
+  },
+  "dependencies": {
+    "axios": "^1.2.1",
+    "ts-node": "^10.9.1"
+  }
+}
